@@ -58,6 +58,7 @@ const resolvers = {
       const { products } = await order.populate('products');
       const line_items = [];
       const url = new URL(context.headers.referer).origin;
+      console.log(url)
 
       for (let i = 0; i < products.length; i++) {
         // generate product id
